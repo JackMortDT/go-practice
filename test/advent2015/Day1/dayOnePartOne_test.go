@@ -61,10 +61,7 @@ func TestSixthSantasFloor(t *testing.T) {
 }
 
 func TestFinalSantasFloor(t *testing.T) {
-	input, err := ioutil.ReadFile("./../../resources/advent2015/dayOne_input.txt")
-	if err != nil {
-		panic(err)
-	}
+	input, _ := ioutil.ReadFile("./../../../resources/advent2015/dayOne_input.txt")
 
 	floors := string(input)
 
