@@ -37,12 +37,12 @@ func convertNumbersToInt(numbers []string) (int, int, int) {
 
 func getSmallSide(l int, w int, h int) int {
 	side1 := l*w; side2 := w*h; side3 := h*l
-	switch {
-	case side1 < side2 && side1 < side3:
-		return side1
-	case side2 < side1 && side2 < side3:
-		return side2
-	default:
-		return side3
+	numbers := []int{side1, side2, side3}
+	smallest := numbers[0]
+	for _, number := range numbers[1:] {
+		if number < smallest {
+			smallest = number
+		}
 	}
+	return smallest
 }
