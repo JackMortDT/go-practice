@@ -33,13 +33,8 @@ func calculatePresentDimension(dimensions string) int {
 func getSmallSide(l int, w int, h int) int {
 	side1 := l*w; side2 := w*h; side3 := h*l
 	numbers := []int{side1, side2, side3}
-	smallest := numbers[0]
-	for _, number := range numbers[1:] {
-		if number < smallest {
-			smallest = number
-		}
-	}
-	return smallest
+	sort.Ints(numbers)
+	return numbers[0]
 }
 
 func CalculateSmallestDimension(dimensions string) int {
