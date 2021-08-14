@@ -1,5 +1,10 @@
 package advent2015
 
+type dayOneInterface interface {
+	CalculateSantasFloor(string) int
+	FirstBasementWhereSantaHasBeen(string) int
+}
+
 /*
 CalculateSantasFloor is a simple function
 that calculate where is santa in the building part 1
@@ -27,7 +32,6 @@ that calculate where is santa in the building part 2
 https://adventofcode.com/2015/day/1
 */
 func FirstBasementWhereSantaHasBeen(floors string) int {
-
 	floor := 0
 	basementNumber := 0
 
@@ -44,5 +48,5 @@ func FirstBasementWhereSantaHasBeen(floors string) int {
 		}
 	}
 
-	return 1
+	return 0
 }

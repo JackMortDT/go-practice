@@ -1,8 +1,8 @@
 package hello
 
 import (
-	"testing"
 	"my.app/pkg"
+	"testing"
 )
 
 func TestHello(t *testing.T) {

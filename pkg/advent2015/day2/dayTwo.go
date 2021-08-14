@@ -31,7 +31,9 @@ func calculatePresentDimension(dimensions string) int {
 }
 
 func getSmallSide(l int, w int, h int) int {
-	side1 := l*w; side2 := w*h; side3 := h*l
+	side1 := l * w
+	side2 := w * h
+	side3 := h * l
 	numbers := []int{side1, side2, side3}
 	sort.Ints(numbers)
 	return numbers[0]
@@ -43,7 +45,7 @@ func CalculateSmallestDimension(dimensions string) int {
 	for _, present := range newDimensions {
 		resultPresent += calculateSmallest(present)
 	}
-	return resultPresent		
+	return resultPresent
 }
 
 func calculateSmallest(dimensions string) int {
